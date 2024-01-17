@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,43 +8,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="icon" href="pic.png" type="image/x-icon" />
     <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            background-color: rgba(2, 2, 78, 0.855);
+            background-color: #02024E;
             color: white;
             font-family: 'Poppins', sans-serif;
         }
 
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
+            padding: 0 10%;
             height: 80px;
-            background-color: rgba(3, 3, 60, 0.855);
+            background-color: #03033C;
         }
 
         nav ul {
             display: flex;
-            justify-content: center;
+            list-style: none;
         }
 
         nav ul li {
-            list-style: none;
-            margin: 0 23px;
+            margin: 0 15px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: white;
+            transition: color 0.3s ease;
         }
 
         nav ul li a:hover {
-            color: rgb(136, 158, 228);
+            color: #889EE4;
             font-size: 1.02rem;
         }
 
@@ -55,13 +57,9 @@
 
         .firstSection {
             display: flex;
-            justify-content: space-around;
-            margin: 80px 0;
+            justify-content: space-between;
+            margin: 80px 10%;
             align-items: center;
-        }
-
-        .firstSection>div {
-            width: 30%;
         }
 
         .leftSection {
@@ -69,19 +67,23 @@
         }
 
         .rightSection img {
-            width: 80%;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
         }
 
         .purple {
-            color: rgb(170, 107, 228);
+            color: #AA6BE4;
         }
 
         #element {
-            color: rgb(170, 107, 228);
+            color: #AA6BE4;
         }
-        .secondSection{
+
+        .secondSection {
             max-width: 80vw;
-            margin : auto;
+            margin: auto;
+            padding: 20px;
         }
     </style>
 </head>
@@ -90,16 +92,13 @@
     <header>
         <nav>
             <div class="left">Ahmed Iltaf</div>
-            <div class="right">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact Me</a></li>
-                </ul>
-            </div>
-
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Projects</a></li>
+                <li><a href="/">Contact Me</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -107,27 +106,26 @@
         <section class="firstSection">
             <div class="leftSection">
                 Hi, My name is <span class="purple">Ahmed</span>
-                <div>and i am a passionate</div>
-                <!-- <div>data scientist</div> -->
+                <div>and I am a passionate</div>
                 <span id="element"></span>
             </div>
             <div class="rightSection">
-                <img src="pic.png" alt="">
-
+                <!-- Replace with your image URL -->
+                <img src="pic.png" alt="Ahmed Iltaf">
             </div>
-
         </section>
-        <section class="secondsection">
+        <section class="secondSection">
             <h1>Past Experience</h1>
+            <!-- Content for past experiences -->
         </section>
     </main>
-
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- Setup and start animation! -->
     <script>
         var typed = new Typed('#element', {
-            strings: [' Web Developer.', 'Data Scientist.', 'Digital Marketer.'],
+            strings: ['Web Developer.', 'Data Scientist.', 'Digital Marketer.'],
             typeSpeed: 50,
+            backSpeed: 25,
+            loop: true
         });
     </script>
 </body>
